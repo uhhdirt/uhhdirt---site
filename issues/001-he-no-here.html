@@ -33,6 +33,7 @@
   .nav a{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
     text-decoration:none;font-weight:600;color:#4a4636;transition:color .15s;white-space:nowrap}
   .nav a:hover{color:#1a1714}
+  .nav a .sh{display:inline-block;opacity:.55;font-size:.85em;letter-spacing:.18em}
   @media (max-width:560px){ .nav a{font-size:9.5px;letter-spacing:.14em} }
   /* —— HERO: the riot —— */
   .hero{
@@ -85,13 +86,13 @@
      Collapsed by default. Open via the tab; collapse via the tab again, the ×,
      a click anywhere outside the panel, or Escape. */
   #verdict{position:fixed;top:22vh;right:0;z-index:65;display:flex;align-items:stretch;
-    transform:translateX(calc(100% - 44px));transition:transform .38s cubic-bezier(.4,0,.2,1)}
+    transform:translateX(calc(100% - 36px));transition:transform .38s cubic-bezier(.4,0,.2,1)}
   #verdict.open{transform:translateX(0)}
-  #verdict .tab{flex:0 0 44px;background:var(--red);color:#fff;cursor:pointer;border:none;
+  #verdict .tab{flex:0 0 36px;background:var(--red);color:#fff;cursor:pointer;border:none;
     writing-mode:vertical-rl;text-orientation:mixed;display:flex;align-items:center;justify-content:center;
-    font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-    padding:1.1rem .2rem;box-shadow:-4px 5px 0 #00000022;
-    clip-path:polygon(0 0,100% 0,100% 100%,50% 93%,0 100%)}
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    padding:.9rem .15rem;box-shadow:-3px 4px 0 #00000022;
+    clip-path:polygon(0 0,100% 0,100% 100%,50% 95%,0 100%)}
   #verdict .panel{position:relative;flex:0 0 min(82vw,320px);background:var(--red);color:#fff;
     padding:2.4rem 1.6rem 1.7rem;box-shadow:-6px 6px 0 #00000022;overflow:auto;max-height:64vh}
   #verdict .vclose{position:absolute;top:.5rem;right:.7rem;background:none;border:none;color:#fff;
@@ -100,6 +101,16 @@
   #verdict .ptitle{font-family:var(--mono);font-size:11px;line-height:1.7;letter-spacing:.03em;
     text-transform:uppercase;font-weight:700;margin-bottom:1rem}
   #verdict .pbody{font-family:var(--serif);font-style:italic;font-size:1.02rem;line-height:1.7;color:#fff}
+
+  /* MOBILE: collapsed = a genuine thin sliver that doesn't crowd the essay.
+     Sits lower and narrower; the panel slides fully off-screen when closed. */
+  @media (max-width:760px){
+    #verdict{top:auto;bottom:16vh;transform:translateX(calc(100% - 22px))}
+    #verdict.open{transform:translateX(0)}
+    #verdict .tab{flex:0 0 22px;font-size:8.5px;letter-spacing:.12em;padding:.7rem .1rem;
+      box-shadow:-2px 3px 0 #00000022}
+    #verdict .panel{flex:0 0 min(86vw,300px);padding:2.2rem 1.3rem 1.5rem;max-height:58vh}
+  }
   /* strain genetics: own line so any spillover sits under the first strain name */
   .strain{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
     color:var(--red);margin:0 0 1.5rem;line-height:1.8}
@@ -121,8 +132,8 @@
 
 <nav class="nav">
   <a href="../index.html#home">Home</a>
-  <a href="#">About</a>
-  <a href="#">Dig In The Dirt</a>
+  <a href="../what-is-uhh-dirt.html">What Is UHH DIRT <span class="sh">(Start Here)</span></a>
+  <a href="https://grow.uhhdirt.com">Dig In The Dirt</a>
 </nav>
 
 <!-- HERO -->
