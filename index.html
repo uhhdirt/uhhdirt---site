@@ -50,17 +50,13 @@
   .nav a .sh{display:inline-block;opacity:.6;font-size:.85em;letter-spacing:.18em}
 
   /* the bookcase IS the navigation — centered, hand-drawn, HUGE, grows per release */
-  .case{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:50;
-    width:min(94vw,1080px);max-height:94vh;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .case{position:fixed;top:47%;left:50%;transform:translate(-50%,-50%);z-index:50;
+    width:min(82vw,920px);max-height:86vh;display:flex;align-items:center;justify-content:center;pointer-events:none}
   .case-inner{position:relative;width:100%;pointer-events:none}
-  .case-svg{width:100%;height:auto;max-height:94vh;display:block;overflow:visible}
+  .case-svg{width:100%;height:auto;max-height:86vh;display:block;overflow:visible}
   .book-hit{position:absolute;left:31.50%;top:13.08%;width:8.67%;height:36.54%;
     pointer-events:auto;cursor:pointer;display:block;transition:transform .15s}
   .book-hit:hover{transform:translateY(-9px)}
-
-  .shelf-label{position:fixed;left:3.4vw;bottom:4.5vh;z-index:55;
-    writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;
-    text-transform:uppercase;font-weight:700;color:#56534b}
 
   .exit{position:fixed;right:3.4vw;bottom:4.5vh;z-index:55;font-family:var(--mono);font-size:11px;
     letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:#777366;cursor:pointer;background:none;border:none}
@@ -115,7 +111,6 @@
     <a href="https://grow.uhhdirt.com">Dig In The Dirt</a>
   </nav>
 
-    <span class="shelf-label">Releases</span>
   <div class="case"><div class="case-inner">
 <svg viewBox="0 0 1200 1040" xmlns="http://www.w3.org/2000/svg" class="case-svg" aria-label="UHH DIRT bookcase"><defs>
   <filter id="rgh3" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="turbulence" baseFrequency="0.012" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
