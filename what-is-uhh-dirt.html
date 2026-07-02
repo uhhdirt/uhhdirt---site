@@ -23,12 +23,12 @@
     text-decoration:none;font-weight:600;color:#4a4636;transition:color .15s;white-space:nowrap}
   @media (max-width:560px){ .nav a{font-size:9.5px;letter-spacing:.14em} }
 
-  .read{position:relative;padding:16vh 6vw 0}
+  .read{position:relative;padding:6vh 6vw 0}
   .read .spine{position:absolute;top:14vh;left:max(2.5vw,18px);font-family:var(--mono);
     font-size:11px;letter-spacing:.42em;color:var(--faded);font-weight:700;
     writing-mode:vertical-rl;text-orientation:mixed;}
   .article{max-width:36rem;margin:0 auto}
-  .backhome{position:fixed;top:0;left:0;z-index:80;font-family:var(--mono);
+  .backhome{position:static;display:inline-block;margin:1.6rem 0 0 3.4vw;font-family:var(--mono);
     font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;
     font-weight:700;color:var(--paper);background:var(--ink);
     padding:.7rem 1rem;transition:background .15s}
@@ -75,7 +75,7 @@
 
   @media (max-width:1024px){ .read .spine{display:none} }
   @media (max-width:640px){
-    .read{padding:14vh 7vw 0}
+    .read{padding:4vh 7vw 0}
     .essay{font-size:1.09rem;line-height:1.86}
   }
 </style>
